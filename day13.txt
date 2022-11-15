@@ -1,0 +1,133 @@
+WAS to do the following
+1.if the day is monday-> need to create a log file with the filene name log.
+2. if day is  tue/wed--> rename a log file i.e log to log_1
+3. if the day is thurs--> copy a log_1 to log
+4. if day is friday --> delete a log_1 file
+
+
+#!/bin/bash
+day=$1
+case $day in
+mon ) touch log
+      ;;
+tue/wed ) mv log log_1
+      ;;
+thu) cp log_1 log
+    ;;
+fri) rm log_1
+   ;;
+*) exist 0
+  ;;
+esac
+
+Write a menu based script to do the following"
+echo "select any option from below"'
+echo "1) search a word"
+2) create link
+3) find a file
+4)create file
+5) exit
+
+
+crontab
+-------
+crontab is a scheduler which is used to schedule scripts on the s/m.
+crontab -e --> it is used to edit the crontab
+crontab -l --> it is used to list the crontab jobs.
+
+* * * * * /home/ec2-user/dir1/shell.sh
+
+* --> min
+* --> hrs
+* --> date
+* --> month
+* --> day of a weak --> 00 --> sunday 06--> saturday 
+
+eg:
+4.15 pm on 16th jan
+-------------------
+
+15 16 16 01 * /home/ec2-user/dir1/shell.sh
+
+
+2pm on every monday
+--------------------
+
+00 14 * * 01
+
+every one hour on wed
+----------------------
+
+00 * * * 03
+
+every one hour on wed and friday
+----------------------
+
+00 * * * 03,05
+
+every one hour on wed ato friday
+----------------------
+
+00 * * * 03-05
+
+
+every 30 mins on monday
+-----------------------
+
+*/30 * * * 01
+
+
+
+sort
+-----
+
+sort is used to sort the data in ascending or descending order
+
+ls | sort
+
+
+uniq
+-----
+used to remove the duplicate data and print only the uniq data.
+ 
+cat filename | uniq
+1
+2
+3
+
+
+gzip
+tar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
